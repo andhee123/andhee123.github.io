@@ -10,3 +10,7 @@
 section {
   padding-top: 5rem;
 }
+
+.m-active {
+  font-weight: bold;
+}
