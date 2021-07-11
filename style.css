@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Sarabun:wght@700&display=swap');
+
 .jumbotron {
   padding-top: 6rem;
   background-color: #e2edff;
+}
+h1, h2, li a, div a{
+  font-family: 'Sarabun', sans-serif;
+}
+p {
+  font-family: 'Inconsolata', monospace;
 }
 
 #projects {

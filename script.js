@@ -1,4 +1,4 @@
-// Navigation with DOM Manipulation
+// Navigation with DOM Manipulation -->
 
 const navigation = document.querySelectorAll('ul li a');
 
@@ -25,3 +25,9 @@ for (let i = 0; i < navigation.length; i++) {
   });
 
 }
+
+const loveIcon = document.querySelector('footer p i');
+
+loveIcon.addEventListener('click', function () {
+  loveIcon.style.color = 'red';
+})
