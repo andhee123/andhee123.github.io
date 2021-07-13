@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Sarabun:wght@700&display=swap');
+@font-face { font-family: Inconsolata; src: url('./font/Inconsolata.ttf'); }
+@font-face { font-family: Sarabun; src: url('./font/Sarabun-Bold.ttf'); }
 
 .jumbotron {
   padding-top: 6rem;
