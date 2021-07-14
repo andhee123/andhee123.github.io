@@ -4,17 +4,17 @@ const navigation = document.querySelectorAll('ul li a');
 
 for (let i = 0; i < navigation.length; i++) {
 
-  navigation[0].addEventListener('click', function() {
+  navigation[0].addEventListener('click', () => {
     navigation[i].classList.remove('active', 'fw-bold');
     navigation[0].classList.add('active', 'fw-bold');
   });
 
-  navigation[1].addEventListener('click', function() {
+  navigation[1].addEventListener('click', () => {
     navigation[i].classList.remove('active', 'fw-bold');
     navigation[1].classList.add('active', 'fw-bold');
   });
 
-  navigation[2].addEventListener('click', function() {
+  navigation[2].addEventListener('click', () => {
     navigation[i].classList.remove('active', 'fw-bold');
     navigation[2].classList.add('active', 'fw-bold');
   });
