@@ -30,7 +30,7 @@
       class="navbar navbar-expand-lg navbar-dark bg-info shadow-sm fixed-top"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">andIXCode</a>
+        <a href="#"><img src="https://images.cooltext.com/5604318.png" width="170px"  alt="andIXCode" /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -79,13 +79,12 @@
           </div>
           <div class="col-6">
             <img
-              src="assets/img/andi.jpg"
-              class="rounded-circle img-thumbnail"
+              src="assets/img/andi2.jpeg"
+              class="img"
               alt="Andi"
               width="200"
             />
-            <h1 class="display-4">Andi</h1>
-            <p class="lead">Beginner Front-End</p>
+            
           </div>
         </div>
       </div>
@@ -235,7 +234,12 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <!-- Alert -->
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terima Kasih</strong> Pesan anda akan kami cek di spreadsheet.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="submit-andixcodesheet-sheet">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
                 <input
@@ -243,6 +247,7 @@
                   class="form-control"
                   id="name"
                   aria-describedby="name"
+                  name="nama"
                 />
               </div>
               <div class="mb-3">
@@ -252,14 +257,19 @@
                   class="form-control"
                   id="email"
                   aria-describedby="emailHelp"
+                  name="email"
                 />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm " role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -305,5 +315,38 @@
       AOS.init();
     </script>
     <script src="./assets/js/script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxCCoQP1LD-whxXxZ7l_8X6I1ZdfAuDI6PvVwJB6WrsehCpYTiHPzMNn1FT5fixhL0G/exec'
+      const form = document.forms['submit-andixcodesheet-sheet']
+
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+
+        // ketika tmbl sudah diklik
+        // tampilkan tmbl lading, hilangkan tmbl kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            // tampilkan tmbl kirim, hilangkan tmbl lading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+
+            // reset frm
+            form.reset()
+
+            // tampilkan alert
+            myAlert.classList.toggle("d-none")
+            console.log('Success!', response)
+          }
+          )
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
