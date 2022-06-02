@@ -1,0 +1,22 @@
+@font-face { font-family: Inconsolata; src: url('../font/Inconsolata.ttf'); }
+@font-face { font-family: Sarabun; src: url('../font/Sarabun-Bold.ttf'); }
+
+.jumbotron {
+  padding-top: 6rem;
+  /* padding-bottom: 14rem; */
+  background-color: #e2edff;
+}
+h1, h2, li a, div a{
+  font-family: 'Sarabun', sans-serif;
+}
+p {
+  font-family: 'Inconsolata', monospace;
+}
+
+#projects {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
