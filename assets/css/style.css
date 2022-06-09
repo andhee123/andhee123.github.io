@@ -4,7 +4,8 @@
 .jumbotron {
   padding-top: 6rem;
   /* padding-bottom: 14rem; */
-  background-color: #e2edff;
+  background-color: #DBDFFD;
+  
 }
 h1, h2, li a, div a{
   font-family: 'Sarabun', sans-serif;
@@ -14,9 +15,16 @@ p {
 }
 
 #projects {
-  background-color: #e2edff;
+  background-color: #DBDFFD;
 }
+
+
 
 section {
   padding-top: 5rem;
 }
+
+.bg-birutua{
+  background-color: #242F9B;
+}
+
