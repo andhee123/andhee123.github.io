@@ -13,10 +13,10 @@
     />
 
     <!-- Font Awesome v6 -->
-    <script src="https://kit.fontawesome.com/fabe38b928.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/fontAwesome.js" crossorigin="anonymous"></script>
 
     <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/aos.css" />
 
     <!-- My CSS -->
     <link href="./assets/img/icons/favicon.png" rel="icon" />
@@ -183,7 +183,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-5 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-duration="1000">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" >
               <img
                 src="assets/img/projects/project_1.png"
                 class="card-img-top"
@@ -196,14 +196,15 @@
                   the bulk of the card's content.
                 </p>
                 <p class="text-center">
-                  <a href="http://localhost/andi_perjalanan/"  class="btn btn-light"><i class="fa fa-earth-asia"></i> Visit Link</a> 
+                  <a href="http://localhost/andi_perjalanan/"  class="btn btn-light">
+                    <i class="fa-regular fa-eye"></i>Visit Link</a> 
                   <a href="#" class="btn btn-light"><i class="fa fa-github"></i> Source code</a>
                 </p>
               </div>
             </div>
           </div>
           <div class="col-md-5 mb-3">
-            <div class="card" data-aos="flip-right" data-aos-duration="1000">
+            <div class="card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="200">
               <img
                 src="assets/img/projects/2.jpg"
                 class="card-img-top"
@@ -216,8 +217,10 @@
                   the bulk of the card's content.
                 </p>
                 <p class="text-center">
-                  <a href="#"  class="btn btn-light"><i class="fa fa-earth-asia"></i> Visit Link</a> 
-                  <a href="#" class="btn btn-light"><i class="fa fa-github"></i> Source code</a>
+                  <a href="#"  class="btn btn-light">Visit Link</a> 
+                  <a href="#" class="btn btn-light">
+                    <i class="fa fa-github"></i> Source code
+                  </a>
                 </p>
               </div>
             </div>
@@ -314,12 +317,15 @@
       </p>
     </footer>
     <!-- Footer End -->
-    <script
-      src="./assets/js/bootstrap.bundle.js"
-      
-    ></script>
+
+    <!-- Bootstrap JS -->
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/fontAwesome.js"></script>
+    
     <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./assets/js/aos.js"></script>
     <script>
       AOS.init();
     </script>
@@ -335,6 +341,7 @@
       gsap.from('nav', {duration : 1, y:-100, opacity: 0, ease: 'bounce'});
       gsap.from('.fw-bolder', {duration : 1, x:100, opacity: 0, delay: 0.5, ease: 'back'});
     </script>
+
 
 
     <script src="./assets/js/script.js"></script>
