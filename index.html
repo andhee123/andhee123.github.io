@@ -77,7 +77,7 @@
           </div>
           <div class="col-md-6">
             <h1 class="fs-1 fw-bolder">My Name Andi</h1>
-            <p class="lead">Students | Frontend Beginner | Gamers</p>
+            <p class="lead"></p>
             <div class="row justify-content-center">
               <h3>Skills</h3>
               <div class="col-md-4 mb-4">
@@ -182,26 +182,27 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-5 mb-3">
             <div class="card" data-aos="flip-left" data-aos-duration="1000">
               <img
-                src="assets/img/projects/1.jpg"
+                src="assets/img/projects/project_1.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
+                <h6 class="fw-bold text-center">Catatan Perjalanan</h4>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
                 <p class="text-center">
-                  <a href="#"  class="btn btn-light"><i class="fa fa-earth-asia"></i> Visit Link</a> 
+                  <a href="http://localhost/andi_perjalanan/"  class="btn btn-light"><i class="fa fa-earth-asia"></i> Visit Link</a> 
                   <a href="#" class="btn btn-light"><i class="fa fa-github"></i> Source code</a>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-5 mb-3">
             <div class="card" data-aos="flip-right" data-aos-duration="1000">
               <img
                 src="assets/img/projects/2.jpg"
@@ -209,6 +210,7 @@
                 alt="..."
               />
               <div class="card-body">
+                <h6 class="fw-bold text-center">Catatan Perjalanan</h4>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -321,7 +323,22 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- GSAP -->
+    <script src="assets/js/gsap.js"></script>
+    <!-- GSAP TextPlugin -->
+    <script src="assets/js/TextPlugin.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', {duration: 1.5, delay: 1.5, text: 'Students | Frontend Beginner | Gamers'})
+      gsap.from('.jumbotron .rounded-circle', {duration : 1.5, rotateY: 360, opacity: 0});
+      gsap.from('nav', {duration : 1, y:-100, opacity: 0, ease: 'bounce'});
+      gsap.from('.fw-bolder', {duration : 1, x:100, opacity: 0, delay: 0.5, ease: 'back'});
+    </script>
+
+
     <script src="./assets/js/script.js"></script>
+
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxCCoQP1LD-whxXxZ7l_8X6I1ZdfAuDI6PvVwJB6WrsehCpYTiHPzMNn1FT5fixhL0G/exec'
